@@ -160,10 +160,12 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    display: none;
   }
 
   .navbar-menu.active {
     max-height: 400px;
+    display: flex;
   }
 
   .nav-link {
