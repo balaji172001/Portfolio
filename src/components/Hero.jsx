@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Hero.css';
+import { FaLinkedin,FaPhone, FaEnvelope } from 'react-icons/fa';
+
 
 function Hero() {
   return (
@@ -44,17 +46,17 @@ function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+            <FaLinkedin /> LinkedIn
           </a>
 
           <a
             href="mailto:balaji32001@gmail.com"
           >
-            Email
+           <FaEnvelope /> Email
           </a>
 
           <a href="tel:+916383783573">
-            +91 63837 83573
+            <FaPhone /> +91 63837 83573
           </a>
         </div>
 

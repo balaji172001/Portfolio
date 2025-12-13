@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -34,17 +36,21 @@ function Contact() {
     {
       title: 'Email',
       value: 'balaji32001@gmail.com',
-      link: 'mailto:balaji32001@gmail.com'
+      link: 'mailto:balaji32001@gmail.com',
+      icon: FaEnvelope
     },
     {
       title: 'Phone',
       value: '+91 63837 83573',
-      link: 'tel:+916383783573'
+      link: 'tel:+916383783573',
+      icon: FaPhoneAlt
+
     },
     {
       title: 'Location',
       value: 'Chennai, Tamil Nadu, India',
-      link: '#'
+      link: '#',
+      icon: FaMapMarkerAlt
     }
   ];
 
@@ -62,7 +68,9 @@ function Contact() {
 
             {contactInfo.map((info, index) => (
               <div key={index} className="info-item">
-                <div className="info-icon"></div>
+                <div className="info-icon">
+                  <info.icon />
+                </div>
                 <div className="info-details">
                   <h4>{info.title}</h4>
                   <a href={info.link}>{info.value}</a>
@@ -110,7 +118,7 @@ function Contact() {
             </div>
 
             <button type="submit" className="btn btn-primary">
-              Send Message
+             <FaPaperPlane /> Send Message
             </button>
           </form>
         </div>

@@ -35,9 +35,12 @@
 }
 
 .footer-socials a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: anchor-center;
+    gap: 8px;
 }
 
 .footer-socials a:hover {

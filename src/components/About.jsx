@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/About.css';
+import { FaCode, FaPaintBrush, FaRocket } from 'react-icons/fa';
+
 
 function About() {
   const features = [
@@ -49,7 +51,11 @@ function About() {
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
-              <div className="feature-icon"></div>
+              <div className="feature-icon">
+                {index === 0 && <FaCode />}
+                {index === 1 && <FaPaintBrush />}
+                {index === 2 && <FaRocket />}
+              </div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
             </div>
