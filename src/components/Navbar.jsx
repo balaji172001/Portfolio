@@ -18,8 +18,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <h1>John Doe</h1>
-          <p>Full Stack Developer</p>
+          <h1>Balaji G</h1>
+          <p>Junior Software Developer</p>
         </div>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>

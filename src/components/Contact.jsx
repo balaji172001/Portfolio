@@ -18,25 +18,32 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add form submission logic here
+
+    const mailtoLink = `mailto:balaji32001@gmail.com
+      ?subject=Portfolio Contact from ${formData.name}
+      &body=Name: ${formData.name}%0A
+      Email: ${formData.email}%0A%0A
+      Message:%0A${formData.message}`;
+
+    window.location.href = mailtoLink;
+
     setFormData({ name: '', email: '', message: '' });
   };
 
   const contactInfo = [
     {
       title: 'Email',
-      value: 'hello@example.com',
-      link: 'mailto:hello@example.com'
+      value: 'balaji32001@gmail.com',
+      link: 'mailto:balaji32001@gmail.com'
     },
     {
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 63837 83573',
+      link: 'tel:+916383783573'
     },
     {
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Chennai, Tamil Nadu, India',
       link: '#'
     }
   ];
@@ -46,12 +53,13 @@ function Contact() {
       <div className="contact-container">
         <h2 className="section-title">Get In Touch</h2>
         <p className="section-subtitle">
-          Have a project in mind or just want to say hi? Feel free to reach out!
+          Have a project, opportunity, or question? Feel free to reach out anytime.
         </p>
-        
+
         <div className="contact-content">
           <div className="contact-info">
             <h3>Contact Information</h3>
+
             {contactInfo.map((info, index) => (
               <div key={index} className="info-item">
                 <div className="info-icon"></div>
@@ -61,8 +69,9 @@ function Contact() {
                 </div>
               </div>
             ))}
+
             <p className="contact-message">
-              I'm always interested in hearing about new projects and opportunities.
+              I’m open to new opportunities, collaborations, and freelance projects.
             </p>
           </div>
 
@@ -71,33 +80,38 @@ function Contact() {
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
             </div>
+
             <div className="form-group">
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
+
             <div className="form-group">
               <textarea
                 name="message"
-                placeholder="Message"
+                placeholder="Your Message"
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn btn-primary">Send Message</button>
+
+            <button type="submit" className="btn btn-primary">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
