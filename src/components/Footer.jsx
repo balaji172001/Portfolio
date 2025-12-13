@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
+import { FaLinkedin, FaHeart,FaPhone,FaEnvelope } from 'react-icons/fa';
+
 
 function Footer() {
   return (
@@ -16,21 +18,21 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+           <FaLinkedin/> LinkedIn
           </a>
 
           <a href="mailto:balaji32001@gmail.com">
-            Email
+           <FaEnvelope /> Email
           </a>
 
           <a href="tel:+916383783573">
-            Phone
+            <FaPhone/>Phone
           </a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>Made with <span>❤️</span> by Balaji</p>
+        <p>Made with <  FaHeart color="red"/> by Balaji</p>
         <p>© 2025 All rights reserved. Built with React & CSS</p>
       </div>
     </footer>

@@ -72,11 +72,14 @@
 }
 
 .feature-icon {
-  width: 60px;
-  height: 60px;
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  margin: 0 auto 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: anchor-center;
+    justify-content: center;
 }
 
 .feature-card h3 {
