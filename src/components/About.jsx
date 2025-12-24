@@ -44,7 +44,8 @@ function About() {
           </div>
 
           <div className="about-image">
-            <div className="placeholder-image"></div>
+                <img src="/assets/PassportSizePhoto.jpeg" alt="Placeholder" />
+           
           </div>
         </div>
 
