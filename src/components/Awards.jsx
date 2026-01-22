@@ -4,16 +4,10 @@ import '../styles/Awards.css';
 function Awards() {
   const awards = [
     {
-      year: '2025',
-      title: 'Outstanding Project Award',
-      issuer: 'XYZ Hackathon',
-      desc: 'Winner for Best Fullstack Project — implemented full CI/CD and demoed live.'
-    },
-    {
-      year: '2024',
-      title: "Dean's List",
-      issuer: 'ABC University',
-      desc: 'Recognized for academic excellence and top 5% of the cohort.'
+      year: 'September 2025',
+      title: 'Rising Developer Star Award',
+      issuer: 'Elito Innovations Pvt. Ltd',
+      desc: 'Recognized for outstanding performance, innovation, and growth potential in software development'
     }
   ];
 
@@ -23,6 +17,7 @@ function Awards() {
         <h2 className="section-title">Awards</h2>
 
         <div className="awards-grid">
+          <img src="/assets/Award.png" alt="AwardImage" />
           {awards.map((a, idx) => (
             <article key={idx} className="award-card">
               <div className="award-year">{a.year}</div>
