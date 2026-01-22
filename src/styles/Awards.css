@@ -16,11 +16,18 @@
 }
 
 .awards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
-
+.awards-grid img {
+  width: 100%;
+  height: auto;
+      max-width: 300px;
+    border-radius: 14px;
+}
 .award-card {
   display: flex;
   gap: 1rem;
@@ -29,6 +36,7 @@
   border-radius: 8px;
   background: rgba(0,0,0,0.03);
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  flex-direction: column;
 }
 
 .award-year {
